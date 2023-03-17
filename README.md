@@ -1,46 +1,61 @@
-This is a fork of OpenAI's GPT-3 Discord Bot that has been modified to have unlimited memory. I utilized David Shapiro's code with some modifications to achieve this, all credit for this goes to David and others who have done this before me. His code is available here: https://github.com/daveshap/LongtermChatExternalSources
+<h1 align="center"><ProjectName></h1>
 
-The bot takes your input and its output and creates embeddings with the 'embedding-ada-002' model and saves them as logs, each time you message the bot a search returns similar topics from your logs, these memories are summarized and a new embedding is created called notes. Each message you send creates a prompt that is sent to GPT-3, the prompt consists of your original prompt to the bot, a sample conversation, your memory notes, the last five messages in chat and your current message. The bot performs very well, able to recall memories of conversations past, it will timestamp them and this also gives the bot additional capabilities like knowing the current time and date.
+<p align="center"><ProjectDescription></p>
 
-In addition to long term memory the bot has been brought out from threads and will talk in regular text channels and does not need / commands. The bot will talk in every channel that it has permission to talk in, including threads, so be mindful of where you put your bot and what permissions it has. All permissions can be modified inside the Discord app. Also, all moderation has been turned off and removed from the code, be careful.
+## Description
 
-This bot uses the [OpenAI Python Library](https://github.com/openai/openai-python) and [discord.py](https://discordpy.readthedocs.io/).
+Will fill this in later.
 
-# Features
+## Links
 
-- The model will generate a reply for every user message in any thread or text channel it has access to
-- The past 5 messages and any history relating to the topic will be passed to GPT-3 with every message
-- you can customize the bot instructions by modifying `config.yaml`
-- you can change the model, the hardcoded value is `text-davinci-003`, the bot also uses 'embeddings-ada-002' for saving its memory
+- [Repo](https://github.com/roderpad/<project-name> "<project-name> Repo")
 
-# Setup
+- [Live](<Homepage url> "Live View of Create Project Website, if relevant")
 
-1. Copy `.env.example` to `.env` and start filling in the values as detailed below (make sure .env is .env and not .env.txt)
-1. Go to https://beta.openai.com/account/api-keys, create a new API key, and fill in `OPENAI_API_KEY`
-1. Create your own Discord application at https://discord.com/developers/applications
-1. Go to the Bot tab and click "Add Bot"
-    - Click "Reset Token" and fill in `DISCORD_BOT_TOKEN`
-    - Disable "Public Bot" unless you want your bot to be visible to everyone
-    - Enable "Message Content Intent" under "Privileged Gateway Intents"
-1. Go to the OAuth2 tab, copy your "Client ID", and fill in `DISCORD_CLIENT_ID`
-1. Copy the ID the server you want to allow your bot to be used in by right clicking the server icon and clicking "Copy ID". Fill in `ALLOWED_SERVER_IDS`. If you want to allow multiple servers, separate the IDs by "," like `server_id_1,server_id_2`
-2. Create folders inside the src directory for each of the following: chat_logs , memories , notes (I need to add this into the code but just haven't gotten to it.)
-3. Install dependencies and run the bot
-    ```
-    pip install -r requirements.txt
-    python -m src.main
-    ```
-    You should see an invite URL in the console. Copy and paste it into your browser to add the bot to your server.
+- [Bugs](https://github.com/roderpad/<project-name>/issues "Issues Page")
 
-# FAQ
+- [API](<API Link> "API, if relevant")
 
-> Why isn't my bot responding to commands?
+## Screenshots
 
-Ensure that the channels your bots have access to allow the bot to have these permissions.
-- Send Messages
-- Send Messages in Threads
-- Create Public Threads
-- Manage Messages (only for moderation to delete blocked messages)
-- Manage Threads
-- Read Message History
-- Use Application Commands
+![Home Page](/screenshots/Chart-SS.png "Chart Example")
+
+## Available Commands
+
+In the project directory, you can run:
+
+### `npm start" : "react-scripts start"`,
+
+The app is built using `create-react-app` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. You also need to run the server file as well to completely run the app. The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+### `"npm run build": "react-scripts build"`,
+
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app will be ready to deploy!
+
+
+## Built With
+
+- Python
+- Plotly
+
+## Future Updates
+
+- [ ] Example TODO
+
+## Author
+
+**Paden Roder**
+
+- [GitHub Profile](https://github.com/roderpad "Paden Roder")
+- [Email: roderpad@gmail.com](mailto:roderpad@gmail.com)
+- [Personal Website](https://padenroder.com/ "Website")
+- [Twitter](https://twitter.com/PadenRoder "Twitter")
+- [LinkedIn](https://www.linkedin.com/in/padenroder/ "LinkedIn")
+- [Twitch](https://www.twitch.tv/roderbro "Twitch")
+
+## 🤝 Support
+
+Contributions, issues, and feature requests are welcome!
+
+Give a ⭐️ if you like this project!
